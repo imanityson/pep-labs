@@ -55,7 +55,7 @@ public class Expressions {
      * look into boolean operations to do this without using if/else statements.
      */
     public boolean returnOr(boolean b1, boolean b2){
-        if (b1 == true ^ b2 == true) {
+        if (b1 == true | b2 == true) {
             return true;
             } else {
             return false;
