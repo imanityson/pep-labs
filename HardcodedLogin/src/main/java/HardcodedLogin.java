@@ -1,3 +1,4 @@
+import javax.sound.sampled.AudioPermission;
 
 public class HardcodedLogin {
     /**
@@ -15,6 +16,17 @@ public class HardcodedLogin {
      * @return true if there is a successful login, and false otherwise.
      */
     public boolean login(String username, String password){
-        return false;
+        String adminUser = "admin";
+        String adminPassword = "qwerty";
+        String user = "user";
+        String userPassword = "password";
+        if(username == adminUser && password == adminPassword){
+            return true;
+        } else if(username == user && password == userPassword){
+            return true;
+        } else {
+            return false;
+        }
+
     }
 }
