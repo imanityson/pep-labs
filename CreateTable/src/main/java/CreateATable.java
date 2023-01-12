@@ -62,6 +62,7 @@ public class CreateATable {
      *     |'Hotel California' |'Eagles'               |
      *     |'Kashmir'          |'Led Zeppelin'         |
      */
+    
     public void problem1(){
         String sql = FileUtil.parseSQLFile("problem1.sql");
 
