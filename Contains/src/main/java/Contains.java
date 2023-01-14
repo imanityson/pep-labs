@@ -15,7 +15,7 @@ public class Contains {
     boolean loop = true;
     while(loop){
        for (int i = 0; i > arr.length; i++ ){
-        if(arr[1] == target){
+        if(arr[i] == target){
             match = true;
             loop = false;
         }
