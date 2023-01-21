@@ -33,7 +33,7 @@ public class FlightDAO {
         List<Flight> flights = new ArrayList<>();
         try {
             //Write SQL logic here
-            String sql = "change me";
+            String sql = "SELECT * FROM Flight";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet rs = preparedStatement.executeQuery();
@@ -58,7 +58,7 @@ public class FlightDAO {
      * The question marks will be filled in by the preparedStatement setString, setInt, etc methods. they follow
      * this format, where the first argument identifies the question mark to be filled (left to right, starting
      * from zero) and the second argument identifies the value to be used:
-     * preparedStatement.setInt(1,int1);
+     * preparedStatement.setInt(1,intre1);
      *
      * @param id a flight ID.
      */
@@ -66,7 +66,7 @@ public class FlightDAO {
         Connection connection = ConnectionUtil.getConnection();
         try {
             //Write SQL logic here
-            String sql = "change me";
+            String sql = "SELECT * FROM Flight where id = ?";
             
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
