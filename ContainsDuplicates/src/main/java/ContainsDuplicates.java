@@ -10,7 +10,7 @@ public class ContainsDuplicates {
     public boolean containsDuplicate(int[] nums){
         boolean duplicate = false;
         for (int i = 0; i < nums.length; i++){
-            for(int test = i; test < nums.length; test++){
+            for(int test = i+1; test < nums.length; test++){
                 if(nums[i] == nums[test]){
                     duplicate = true;
                 } else {
