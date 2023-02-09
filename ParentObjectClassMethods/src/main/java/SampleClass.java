@@ -54,14 +54,14 @@
 public class SampleClass {
     public int a;
     public boolean b; 
-    this.a = a;
-    this.b =b;
+  
 
 
     //    implement a custom .equals(SampleClass other){} method here.
     public boolean equals(Object obj){
-        
-        if(obj.a == a && obj.b == b){
+       SampleClass test = (SampleClass) obj;
+
+        if(this.a == test.a && this.b == test.b){
             return true;
         } else{
             return false;
