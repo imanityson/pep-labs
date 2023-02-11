@@ -57,7 +57,7 @@ public class BookDAO {
         Connection connection = ConnectionUtil.getConnection();
         try {
             //Write SQL logic here
-            String sql = "select * from Book where isbn=?;";
+            String sql = "select * from Book where (isbn)=(?);";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write preparedStatement's setInt method here.
@@ -114,7 +114,7 @@ public class BookDAO {
         List<Book> books = new ArrayList<>();
         try {
             //Write SQL logic here
-            String sql = "select title from Book where copies_available > 0); ";
+            String sql = "select * from Book where copies_available > 0;";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
 
