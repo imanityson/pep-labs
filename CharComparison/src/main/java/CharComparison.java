@@ -11,16 +11,23 @@ public class CharComparison {
      * @return -1 if A is less than B, 1 if A is greater than B, and 0 if the two arrays are identical.
      */
     public int compare(char[] a, char[] b){
-        int[] comparison;
-        comparison = new int[a.length];
+       // int[] comparison;
+        //comparison = new int[a.length];
+        int index = 0;
         for(int i = 0; i < a.length; i++){
-            if(a[i] < b[i]){
-                comparison[i] = -1; 
-            } else if (a[i] > b[i]){
-                comparison[i] = 1;
-            } else {
-                comparison[i] = 0;
-            }
-        }
+                    if(a[i] > b[i]){
+                     index = 1;
+                     break;
+                    } else if(a[i] < b[i]){
+                        index = -1;
+                        break;
+                    } else{
+                        index = 0;
+                    }
+                }
+                return index;
+
     }
-}
+
+ }
+
