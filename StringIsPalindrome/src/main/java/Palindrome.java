@@ -1,3 +1,4 @@
+import java.lang.StringBuilder; 
 
 public class Palindrome {
     /**
@@ -12,6 +13,12 @@ public class Palindrome {
      * @return true if str is a palindrome, false otherwise.
      */
     public boolean pal(String str){
-        return false;
+        StringBuilder reverseStr = new StringBuilder(str);
+        //reverseStr.append(str);
+        reverseStr.reverse();
+       boolean compare = reverseStr.equals(str);
+        
+
+        return compare;
     }
 }
