@@ -17,13 +17,18 @@ public class MostCommonCharacter {
         for(int i = 0; i < str.length(); i++){
             Character currentChar = str.charAt(i);
             if(charactersCount.containsKey(currentChar)){
-                charactersCount.put(currentChar, charactersCount.get(currentChar)+1);
+                charactersCount.replace(currentChar, charactersCount.get(currentChar)+1);
             } else {
                 charactersCount.put(currentChar, 1);
             }
         }
+        char key = str.charAt(0);
+        for(int i = 0; i < charactersCount.size(); i++){
+            if(charactersCount.get(str.charAt(i)) > charactersCount.get(key)){
+                key = str.charAt(i);
+            }
+        }
 
-
-        //return ;
+        return key;
     }
 }
