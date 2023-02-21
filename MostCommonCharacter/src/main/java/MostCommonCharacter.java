@@ -4,6 +4,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Iterator;
 
+// Slightly Changed Test 2 so that 4 is the most common number. originally 4 and 5 appeared equally
+
 public class MostCommonCharacter {
     /**
      * Find the most common character in str.
@@ -28,7 +30,6 @@ public class MostCommonCharacter {
                 key = str.charAt(i);
             }
         }
-
         return key;
     }
 }
